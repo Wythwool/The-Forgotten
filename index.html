@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Official page of The Forgotten by Mono GlaShyiz." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Forgotten | Mono GlaShyiz</title>
+  <!-- Подключение Google Fonts (пример) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    /* Сброс базовых стилей */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0c0e10;
+      color: #fff;
+      overflow-x: hidden;
+      /* Можно добавить фоновое изображение или видео */
+      /* background: url('your-bg-image.jpg') no-repeat center center/cover; */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 300;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #69f0ae;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .release-date {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .btn-primary {
+      padding: 1rem 2rem;
+      background: #69f0ae;
+      color: #0c0e10;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #00c853;
+    }
+
+    /* Описание игры */
+    .about-game {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: #111418;
+    }
+
+    .about-game h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-game p {
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+    }
+
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .screenshots img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border: 2px solid #333;
+      border-radius: 4px;
+      transition: transform 0.3s;
+    }
+
+    .screenshots img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Countdown Section */
+    .countdown {
+      padding: 6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #0c0e10;
+      text-align: center;
+    }
+
+    .countdown h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .time {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .time .box {
+      font-size: 1.5rem;
+      background: #111418;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+    }
+
+    /* О создателе */
+    .about-dev {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: #111418;
+    }
+
+    .about-dev h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-dev p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: #0c0e10;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer a {
+      color: #69f0ae;
+      text-decoration: none;
+    }
+
+    /* Отступ, чтобы фиксированная шапка не перекрывала контент */
+    .spacer {
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Mono GlaShyiz</div>
+    <nav>
+      <ul>
+        <li><a href="#game">Game</a></li>
+        <li><a href="#about-dev">About</a></li>
+        <li><a href="#contact">Social</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="spacer"></div>
+    <h1>The Forgotten</h1>
+    <div class="release-date">Release Date: 11.01.2025</div>
+    <p>
+      Immerse yourself in a mysterious world where ancient secrets 
+      await to be uncovered. Are you ready to face The Forgotten?
+    </p>
+    <a href="#game" class="btn-primary">Learn More</a>
+  </section>
+
+  <!-- About the Game Section -->
+  <section class="about-game" id="game">
+    <h2>About The Game</h2>
+    <p>
+      The Forgotten is an atmospheric action-adventure game that 
+      plunges you into a land lost to time. Explore abandoned ruins, 
+      unravel cryptic puzzles, and battle otherworldly creatures 
+      lurking in the shadows.
+    </p>
+    <div class="screenshots">
+      <!-- Добавьте реальные пути к вашим скриншотам -->
+      <img src="https://i.imgur.com/GmnAaIj.png" alt="Screenshot: The Forgotten - Main Hall" />
+      <img src="https://i.imgur.com/lLGHQNV.png" alt="Screenshot: The Forgotten - Desk Room" />
+      <img src="https://i.imgur.com/DuMamDp.png" alt="Screenshot: The Forgotten - Monster in the Dark" />
+      <img src="https://i.imgur.com/KYeSnXb.png" alt="Screenshot: The Forgotten - Another Monster Shot" />
+    </div>
+  </section>
+
+  <!-- Countdown Section -->
+  <section class="countdown">
+    <h2>Time Until Release</h2>
+    <div class="time" id="countdownTimer">
+      <div class="box" id="days">00<br>Days</div>
+      <div class="box" id="hours">00<br>Hours</div>
+      <div class="box" id="minutes">00<br>Minutes</div>
+      <div class="box" id="seconds">00<br>Seconds</div>
+    </div>
+  </section>
+
+  <!-- About the Developer -->
+  <section class="about-dev" id="about-dev">
+    <h2>About Mono GlaShyiz</h2>
+    <p>
+      Mono GlaShyiz is an independent game development studio run by a single 
+      passionate developer. I strive to bring unique and immersive experiences 
+      that leave a lasting impression on players worldwide.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2025 Mono GlaShyiz. All rights reserved.</p>
+    <!-- Вместо контактов теперь Telegram и Patreon -->
+    <p>
+      <a href="https://t.me/monoglashyiz" target="_blank">Telegram Channel</a> |
+      <a href="https://patreon.com/MonoGlaShyiz" target="_blank">Patreon</a>
+    </p>
+  </footer>
+
+  <!-- Пример JavaScript для обратного отсчёта -->
+  <script>
+    // Устанавливаем дату релиза (месяцы в JS начинаются с 0)
+    const releaseDate = new Date("Jan 11, 2025 00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = releaseDate - now;
+
+      // Вычисляем дни, часы, минуты, секунды
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Отображаем
+      document.getElementById("days").innerHTML = days + "<br>Days";
+      document.getElementById("hours").innerHTML = hours + "<br>Hours";
+      document.getElementById("minutes").innerHTML = minutes + "<br>Minutes";
+      document.getElementById("seconds").innerHTML = seconds + "<br>Seconds";
+
+      // Если релиз уже наступил
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdownTimer").innerHTML = "Released!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
