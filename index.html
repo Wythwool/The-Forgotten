@@ -148,7 +148,7 @@
       transform: scale(1.03);
     }
 
-    /* Countdown Section */
+    /* Секция для DEMO */
     .countdown {
       padding: 6rem 2rem;
       display: flex;
@@ -163,17 +163,10 @@
       margin-bottom: 1rem;
     }
 
-    .time {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .time .box {
-      font-size: 1.5rem;
-      background: #111418;
-      padding: 1rem 2rem;
-      border-radius: 4px;
+    .countdown p {
+      max-width: 700px;
+      line-height: 1.6;
+      margin: 1rem auto 2rem auto;
     }
 
     /* О создателе */
@@ -232,9 +225,10 @@
   <section class="hero" id="home">
     <div class="spacer"></div>
     <h1>The Forgotten</h1>
+    <!-- Если хотите убрать дату, можете удалить следующий див -->
     <div class="release-date">Release Date: 11.01.2025</div>
     <p>
-      Immerse yourself in a mysterious world where ancient secrets 
+      Immerse yourself in a mysterious world where ancient secrets
       await to be uncovered. Are you ready to face The Forgotten?
     </p>
     <a href="#game" class="btn-primary">Learn More</a>
@@ -244,13 +238,12 @@
   <section class="about-game" id="game">
     <h2>About The Game</h2>
     <p>
-      The Forgotten is an atmospheric action-adventure game that 
-      plunges you into a land lost to time. Explore abandoned ruins, 
-      unravel cryptic puzzles, and battle otherworldly creatures 
+      The Forgotten is an atmospheric action-adventure game that
+      plunges you into a land lost to time. Explore abandoned ruins,
+      unravel cryptic puzzles, and battle otherworldly creatures
       lurking in the shadows.
     </p>
     <div class="screenshots">
-      <!-- Добавьте реальные пути к вашим скриншотам -->
       <img src="https://i.imgur.com/GmnAaIj.png" alt="Screenshot: The Forgotten - Main Hall" />
       <img src="https://i.imgur.com/lLGHQNV.png" alt="Screenshot: The Forgotten - Desk Room" />
       <img src="https://i.imgur.com/DuMamDp.png" alt="Screenshot: The Forgotten - Monster in the Dark" />
@@ -258,15 +251,17 @@
     </div>
   </section>
 
-  <!-- Countdown Section -->
+  <!-- Заменённая секция: вместо обратного отсчёта - кнопка на DEMO -->
   <section class="countdown">
-    <h2>Time Until Release</h2>
-    <div class="time" id="countdownTimer">
-      <div class="box" id="days">00<br>Days</div>
-      <div class="box" id="hours">00<br>Hours</div>
-      <div class="box" id="minutes">00<br>Minutes</div>
-      <div class="box" id="seconds">00<br>Seconds</div>
-    </div>
+    <h2>Demo Available Now</h2>
+    <p>Try the game before the full release by downloading our free demo version.</p>
+    <a 
+      href="https://drive.google.com/file/d/1zks4IOI5bHjSbVoQLxjZu23NBAH7n8m9/view?usp=drive_link" 
+      class="btn-primary" 
+      target="_blank"
+    >
+      Download DEMO
+    </a>
   </section>
 
   <!-- About the Developer -->
@@ -282,44 +277,11 @@
   <!-- Footer -->
   <footer id="contact">
     <p>&copy; 2025 Mono GlaShyiz. All rights reserved.</p>
-    <!-- Вместо контактов теперь Telegram и Patreon -->
     <p>
       <a href="https://t.me/monoglashyiz" target="_blank">Telegram Channel</a> |
       <a href="https://patreon.com/MonoGlaShyiz" target="_blank">Patreon</a>
     </p>
   </footer>
-
-  <!-- Пример JavaScript для обратного отсчёта -->
-  <script>
-    // Устанавливаем дату релиза (месяцы в JS начинаются с 0)
-    const releaseDate = new Date("Jan 11, 2025 00:00:00").getTime();
-
-    const countdownFunction = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = releaseDate - now;
-
-      // Вычисляем дни, часы, минуты, секунды
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Отображаем
-      document.getElementById("days").innerHTML = days + "<br>Days";
-      document.getElementById("hours").innerHTML = hours + "<br>Hours";
-      document.getElementById("minutes").innerHTML = minutes + "<br>Minutes";
-      document.getElementById("seconds").innerHTML = seconds + "<br>Seconds";
-
-      // Если релиз уже наступил
-      if (distance < 0) {
-        clearInterval(countdownFunction);
-        document.getElementById("countdownTimer").innerHTML = "Released!";
-      }
-    }, 1000);
-  </script>
+  
 </body>
 </html>
